@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/dist": true,
+    "**/fable_modules": true,
+    "**/node_modules": true,
+    "**/*.fs.js.map": true,
+    "**/.ionide": true
+  }
+}
