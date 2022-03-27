@@ -20,7 +20,7 @@ module State =
     open Types
 
     let init () =
-        { Editor = None; Language = TypeScript; Value = "console.log('Hello, world!')" }, Cmd.none
+        { Editor = None; Language = JavaScript; Value = "console.log('Hello, world!')" }, Cmd.none
 
     let update (message: Message) (model: Model) =
         match message with

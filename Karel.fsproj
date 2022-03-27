@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="src\Karel.fs" />
     <Compile Include="src\Monaco.fs" />
     <Compile Include="src\Editor.fs" />
     <Compile Include="src\App.fs" />

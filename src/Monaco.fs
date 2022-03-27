@@ -29,11 +29,7 @@ let monaco: IMonaco = importAll "monaco-editor"
 monaco?languages?typescript?javascriptDefaults?setCompilerOptions({| noLib = true; allowNonTsExtensions = true |})
 
 promise {
-    let! response = fetch "/lib.ts" []
-    let! lib = response.text()
-    console.log(lib)
-
-    monaco?languages?typescript?javascriptDefaults?addExtraLib(lib, "ts:lib.ts")
-
-    return ()
+    let! response = fetch "/karel.d.ts" []
+    let! karel = response.text()
+    monaco?languages?typescript?javascriptDefaults?addExtraLib(karel, "ts:karel.d.ts")
 } |> ignore
