@@ -28,7 +28,7 @@ module State =
             let (editor, editorCmd) = Editor.State.update message model.Editor
             { model with Editor = editor }, Cmd.map EditorMessage editorCmd
         | KarelMessage message ->
-            let (karel, karelCmd) = Karel.State.update message model.Editor
+            let (karel, karelCmd) = Karel.State.update message model.Karel
             { model with Karel = karel }, Cmd.map KarelMessage karelCmd
 
 module View =
@@ -45,9 +45,11 @@ module View =
     let root (model: Model) (dispatch: Message -> unit) =
         let editor = Editor.View.root model.Editor (EditorMessage >> dispatch)
 
+        let run _ = model.Editor.Value |> Karel.Types.Execute |> (KarelMessage >> dispatch)
+
         div 
             [ Style [ Height "100%" ] ] 
             [ button 
-                  [ OnClick (fun _ -> run(model.Editor.Value)) ]
+                  [ OnClick run ]
                   [ str "Run" ]
               editor ]
