@@ -3,7 +3,6 @@ module Karel
 open Fable.Core
 open Fable.Core.JS
 
-open Worker
 open Fable.Core.JsInterop
 
 module Types =

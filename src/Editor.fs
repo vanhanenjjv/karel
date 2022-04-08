@@ -31,7 +31,6 @@ module State =
 let private lowercase (str: string) = str.ToLower()
 
 module View =
-    open Fable.Core.JS
     open Fable.React.Standard
     open Fable.React.Props
 

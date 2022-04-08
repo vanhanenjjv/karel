@@ -4,7 +4,11 @@ function evaluate(code) {
   return output
 }
 
+
+
 onmessage = function (event) {
+
+
   const code = event.data
   const output = evaluate(code)
   this.postMessage(output)
