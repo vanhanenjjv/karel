@@ -55,16 +55,16 @@ let Worker x =
     let y = createNew workerConstructor x 
     y :?> Browser.Types.Worker
 
-let (|Move|Drop|Turn|Start|End|) (arr: obj array) =
-    let t = arr.[0] |> string
-    match t with
-    | "MOVE" -> Move
-    | "DROP" -> Drop
-    | "TURN" -> Turn arr.[1]
+// let (|Move|Drop|Turn|Start|End|) (arr: obj array) =
+//     let t = arr.[0] |> string
+//     match t with
+//     | "MOVE" -> Move
+//     | "DROP" -> Drop
+//     | "TURN" -> Turn arr.[1]
     
-    |
-    if value = "hehe" then Test value
-    else Meme value
+//     |
+//     if value = "hehe" then Test value
+//     else Meme value
 
 module State =
     open Elmish

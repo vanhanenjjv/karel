@@ -7,3 +7,8 @@
     flex
     flex-row
 }
+
+.grid-cell {
+  @apply
+    inline-flex
+}

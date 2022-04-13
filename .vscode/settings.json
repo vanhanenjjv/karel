@@ -14,5 +14,6 @@
     "**/*.fs.js.map": true,
     "**/.ionide": true
   },
+  "css.lint.unknownAtRules": "ignore",
   "FSharp.dotnetRoot": "/usr/local/share/dotnet"
 }
