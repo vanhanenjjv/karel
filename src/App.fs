@@ -52,4 +52,5 @@ module View =
             [ button 
                   [ OnClick run ]
                   [ str "Run" ]
+              Grid.view { Columns = 4; Rows = 2 }
               editor ]

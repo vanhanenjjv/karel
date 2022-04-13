@@ -6,6 +6,7 @@ open Elmish.React
 
 open App
 
+importSideEffects "./tailwind.css"
 importSideEffects "./style.css"
 
 Program.mkProgram State.init State.update View.root

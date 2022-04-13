@@ -1,16 +1,23 @@
-function evaluate(code) {
-  const func = new Function(code)
-  const output = func()
-  return output
+function move() {
+  this.postMessage(['Move'])
 }
 
+function turn(Direction) {
+  this.postMessage(['Turn', Direction])
+}
 
+function pickup() {
+  this.postMessage(['Pickup'])
+}
 
-onmessage = function (event) {
+function drop() {
+  this.postMessage(['Drop'])
+}
 
-
+onmessage = function (event) {  
   const code = event.data
-  const output = evaluate(code)
-  this.postMessage(output)
-  postMessage(output);
+  const func = new Function(code)
+  this.postMessage(['Start'])
+  func()
+  this.postMessage(['End'])
 }
